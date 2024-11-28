@@ -1,0 +1,614 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do perfil */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.profile-left {
+    display: flex;
+}
+
+/* Estilo para a foto de perfil */
+.profile-photo img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    border: 4px solid #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    object-fit: cover; 
+    margin-bottom: 15px; 
+}
+
+/* Estilo para a seção de informações do jogador */
+.profile-info {
+    padding-left: 20px; 
+}
+.player-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.player-position, .player-team, .player-nationality, .player-birthday {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile-right {
+    text-align: right;
+}
+
+.player-age, .player-height, .player-weight {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Seção de estatísticas */
+.profile-stats {
+    margin-bottom: 40px;
+}
+
+.profile-stats h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.stats-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 22%;
+}
+
+.stats-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.stats-item p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Histórico do jogador */
+.profile-history {
+    margin-bottom: 30px;
+}
+
+.profile-history h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.profile-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-history li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile-history strong {
+    font-weight: bold;
+}
+
+/* Seção de vídeos - Melhores Momentos */
+.profile-videos {
+    margin-bottom: 40px;
+}
+
+.profile-videos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.video-item {
+    width: 32%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.video-title {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Rodapé */
+.profile-footer {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+    margin-top: 40px;
+}
+/* Seção de Últimos Jogos */
+.profile-last-matches {
+    margin-bottom: 40px;
+}
+
+.profile-last-matches h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.match-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.match-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.match-item strong {
+    font-weight: bold;
+    color: #333;
+}
+/* Estilo para a seção do Overall dentro de um círculo */
+.player-overall {
+    margin-top: 20px;
+    width: 80px; 
+    height: 80px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.3rem;  
+    font-weight: 600;  
+    color: #000000;  
+    background-color: #f1fff4; 
+    border-radius: 50%; 
+    text-align: center;  
+    border: 2px solid #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+.player-overall:hover {
+    background-color: #fdfdfd;  
+    border-color: #000000;  
+}
+
+.player-overall strong {
+    font-size: 1.3rem;  
+}
+/* Estilo para o botão de upload */
+.upload-button {
+    display: inline-block;
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px; 
+}
+
+.upload-button:hover {
+    background-color: #0056b3; 
+}
+
+/* Estilo para o vídeo de pré-visualização */
+#video-preview {
+    display: block;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+/* Estilo para a área de comentários */
+.player-comments {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o campo de texto do comentário */
+#comment-text {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: vertical;
+    outline: none;
+}
+
+/* Estilo para o botão de adicionar comentário */
+.comment-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comment-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a lista de comentários */
+#comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+.comment span {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+/* Estilo para a seção de troféus */
+.player-trophies {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção de troféus */
+.player-trophies h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada troféu */
+.trophy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do troféu */
+.trophy img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+/* Informações do troféu */
+.trophy-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome do troféu */
+.trophy-info h4 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+/* Descrição do troféu */
+.trophy-info p {
+    font-size: 1rem;
+    color: #666;
+}
+/* Estilo para a seção de Histórico de Clubes */
+.player-clubs-history {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção de histórico de clubes */
+.player-clubs-history h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada clube */
+.club {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do logo do clube */
+.club img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+/* Informações do clube */
+.club-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome do clube */
+.club-info h4 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+/* Descrição do clube */
+.club-info p {
+    font-size: 1rem;
+    color: #666;
+}
+/* Estilo para a seção de Últimos Jogos */
+.player-latest-matches {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção de últimos jogos */
+.player-latest-matches h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada jogo */
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Informações do jogo */
+.match-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Estilo para a seção de Últimos Jogos */
+.player-latest-matches {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção de últimos jogos */
+.player-latest-matches h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada jogo */
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Informações do jogo */
+.match-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Estilo para a data do jogo */
+.match-info p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Resultados */
+.match-info p strong {
+    font-weight: bold;
+}
+
+/* Adicionar estilos para a vitória e empate */
+.match-info p {
+    color: #555;
+}
+
+.match-info p.vitoria {
+    color: green;
+}
+
+.match-info p.empate {
+    color: gray;
+}
+
+.match-info p.derrota {
+    color: red;
+}
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Layout de container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Ajustar tamanho da foto do jogador */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+
+/* Estilo da seção de informações do jogador */
+.player-info {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .player-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .player-details {
+        margin-top: 15px;
+    }
+}
+
+/* Estilo para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .player-info {
+        padding: 10px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .player-details p {
+        font-size: 0.9rem;
+    }
+
+    .player-latest-matches .match {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+
